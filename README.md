@@ -1,14 +1,14 @@
-# Spidey
+cd F:\Projects\Sample\go\src\github.com\tinrab\spidey
+//create spidey database, create table in db(table schema is available in account\up.sql file)
+//update db connection string in account/cmd/account/main.go. DB URL should be postgres://<username>:<password>@localhost/<database name?sslmode=disable
+                                                                                                                                    
+//run account micro service
 
-Online store based on microservices and GraphQL.
+go run account\cmd\account\main.go
 
-The underlying source code for the article [Using GraphQL API Gateway for Microservices in Go](https://outcrawl.com/go-graphql-gateway-microservices).
+//run graphql service
+go run graphql/main.go
 
-## Build
+//play with it
+//http://localhost:8082/playground
 
-```
-$ go mod vendor
-$ docker-compose up -d --build
-```
-
-Open <http://localhost:8000/playground> in your browser.
